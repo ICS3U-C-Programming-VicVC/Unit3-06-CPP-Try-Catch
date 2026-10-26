@@ -2,7 +2,8 @@
 // .
 // Created by: Your Name
 // Date: 09/16/26
-// Write what this program does.
+// This program asks the user to guess a number between 0-9.
+// It also supports input failures.
 
 
 #include <string>
@@ -38,7 +39,8 @@ int main() {
 
         // Checking whether or not the user guess correcty.
         if (guessedNumAsNum == generatedNum) {
-            // If they guessed correctly, then let the user know they guessed correctly
+            // If they guessed correctly,
+            // then let the user know they guessed correctly
             std::cout << "You guessed correctly!\n";
         } else {
             // Otherwise, let them know the correct number
@@ -46,14 +48,15 @@ int main() {
             std::cout << "The correct number was: " << generatedNum << "\n";
         }
 
-        // If the try statement fails, it was likely due to the input from the user being invalid
+        // If the try statement fails, it was likely
+        // due to the input from the user being invalid
     } catch (std::invalid_argument) {
         // Tell the user about the mistake
         std::cout << "("
         << guessedNumAsString
         << ") is not a valid value. (MUST BE A NUMBER)\n";
     }
-    
+
     // Dismiss the user
     std::cout << "Thanks for playing!\n";
 }
